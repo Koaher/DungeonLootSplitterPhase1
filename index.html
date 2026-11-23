@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Khoa Vu Tran">
+  <title>Dungeon Loot Splitter</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Dungeon Loot Splitter</h1>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>Party Setup</h2>
+      <label for="partySize">Number of Party Members:</label>
+      <input type="number" id="partySize" min="1" step="1">
+    </section>
+
+    <section class="panel">
+      <h2>Add Loot</h2>
+      <label for="lootName">Loot Name:</label>
+      <input type="text" id="lootName">
+      <label for="lootValue">Loot Value:</label>
+      <input type="number" id="lootValue" min="0" step="0.01">
+      <button id="addLoot">Add Loot</button>
+    </section>
+
+    <section class="panel">
+      <h2>Loot List</h2>
+      <ol id="lootList"></ol>
+      <p>Total Loot: <span id="listTotal">0.00</span></p>
+    </section>
+
+    <section class="panel">
+      <h2>Split Loot</h2>
+      <button id="splitLoot">Split Loot</button>
+      <p>Total Loot: <span id="splitTotal">0.00</span></p>
+      <p>Loot Per Party Member: <span id="perMember">0.00</span></p>
+    </section>
+
+    <p id="message" role="alert"></p>
+
+    <section class="panel reflection">
+      <h2>Logic Explanation</h2>
+      <p>The loot array holds one object for each item, and each object has a name and a value. The array is declared at the top of the script so it keeps its items between button clicks.</p>
+      <p>For loop in getTotal() to add up every value in the array. Another for loop in renderLoot() to build one list item for each object.</p>
+      <p>If statements check the inputs first. When adding loot, they make sure the name is not empty and the value is a number that is not negative. When splitting, they make sure the party size is a whole number and is >= 1 and that the array has loot. If the check fails, a message shows on the page and the function stops.</p>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

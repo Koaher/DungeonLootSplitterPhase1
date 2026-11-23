@@ -1,0 +1,17 @@
+{
+  "name": "codingassignment8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "quest_loot.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
